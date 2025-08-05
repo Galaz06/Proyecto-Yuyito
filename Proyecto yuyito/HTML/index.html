@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Menu principal</title>
+    <link rel="stylesheet" href="C:\Users\onemo\Desktop\Proyecto yuyito\CSS\estilosMenu.css">
+</head>
+<body>
+
+    <!-- botón para abrir el formulario de iniciar sesión/registro -->
+    <button class="botonSesion" onclick="alternarAutenticacion()">Iniciar sesión</button>
+
+    <!-- menú principal con opciones de deportes -->
+    <h1>Menu principal</h1>
+    <nav>
+
+        <!-- opción de básquetbol -->
+        <div class="menu-item">
+            <button href="C:\Users\PROGRAMACION\Desktop\Proyecto yuyito Original\Formularios\Basquetbol\index.html" id="basquet" onclick="redirigir('formB.html')">Basquetbol</button>
+            <div class="tarjeta-info">
+                Dos equipos de 5 jugadores intentan encestar la pelota en el aro del equipo contrario.
+                Gana quien más puntos anote. Se juega con las manos, botando el balón.
+            </div>
+        </div>
+
+        <!-- opción de babyfútbol -->
+        <div class="menu-item">
+            <button href="C:\Users\PROGRAMACION\Desktop\Proyecto yuyito Original\Formularios\BabyFutbol\index.html" id="futbol" onclick="redirigir('formF.html')">Babyfutbol</button>
+            <div class="tarjeta-info">
+                Es una versión infantil del fútbol. Se juega en cancha más pequeña (generalmente techada),
+                con 5 a 7 jugadores por equipo. Se gana anotando más goles que el rival.
+            </div>
+        </div>
+
+        <!-- opción de voleibol -->
+        <div class="menu-item">
+            <button href="C:\Users\PROGRAMACION\Desktop\Proyecto yuyito Original\Formularios\Voleibol\index.html" id="volei" onclick="redirigir('formV.html')">Voleibol</button>
+            <div class="tarjeta-info">
+                Dos equipos de 6 jugadores separados por una red. El objetivo es pasar el balón por encima sin que toque el suelo en el propio lado.
+                Gana quien logre más sets.
+            </div>
+        </div>
+
+    </nav>
+
+    <!--llamamos a las funciones de js definidas en otra carpeta-->
+    <script src="C:\Users\onemo\Desktop\Proyecto yuyito\JavaScript\funciones.js"></script>
+
+</body>
+</html>

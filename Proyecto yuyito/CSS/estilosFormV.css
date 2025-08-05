@@ -1,0 +1,108 @@
+/* Estilos generales para el cuerpo del documento.
+Aplica una imagen de fondo, ocupa toda la pantalla y centra el formulario. */
+body {
+    background-image: url('https://wallpapers.com/images/hd/mikasa-youth-volleyball-4k-rff09skwugjgjye8.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Botón "Volver atrás" en la esquina superior derecha, con diseño responsivo. */
+.volver {
+    position: absolute;
+    top: 3vh;
+    right: 3vw;
+    padding: 1vh 2vw;
+    background: #ff9d1e;
+    border: none;
+    color: #000000;
+    font-size: 1.2vw;
+    border-radius: 0.5vw;
+    cursor: pointer;
+}
+
+/* Contenedor del formulario.
+    Tiene fondo semitransparente, bordes redondeados y tamaño proporcional a la pantalla. */
+.formulario {
+    background-color: rgba(168, 168, 168, 0.6);
+    border: 0.2vw solid black;
+    padding: 3% 5%;
+    border-radius: 1.5vw;
+    box-shadow: 0 0 1.5vw rgba(0, 0, 0, 0.4);
+    width: 40%;
+    min-width: 280px;
+}
+
+/* Título del formulario, centrado y de tamaño adaptable. */
+.formulario h2 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 5%;
+}
+
+/* Diseño de los campos del formulario, en columna. */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas de los campos, alineadas a la izquierda y responsivas. */
+.formulario label {
+    font-size: 1.2vw;
+    margin-bottom: 0.5vh;
+    text-align: left;
+}
+
+/* Campos de entrada: tamaño adaptable, bordes y padding proporcionado. */
+.formulario input {
+    padding: 1vh;
+    font-size: 1.2vw;
+    border: 0.1vw solid #ccc;
+    border-radius: 0.5vw;
+    margin-bottom: 3vh;
+}
+
+/* Botón de envío, con estilo moderno e interacción visual. */
+.formulario button {
+    padding: 1.2vh 2vw;
+    font-size: 1.2vw;
+    border-radius: 1vw;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover para el botón de envío. */
+.formulario button:hover {
+    background-color: #555;
+}
+
+/* Responsividad para pantallas pequeñas como móviles. */
+@media screen and (max-width: 600px) {
+.formulario {
+        width: 80%;
+        padding: 5% 7%;
+    }
+
+    .formulario h2 {
+        font-size: 6vw;
+    }
+
+    .formulario label,
+    .formulario input,
+    .formulario button {
+        font-size: 4vw;
+    }
+
+    .volver {
+        font-size: 4vw;
+        padding: 1vh 4vw;
+    }
+}

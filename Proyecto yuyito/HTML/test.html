@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="tiempo_tablero"></div>
+    <script>
+        function tiempoTablero(min, seg) {
+            for (let i=min; i>=0; i--) {
+                for (let x=seg; x>=0; x--) {
+                    document.getElementById('tiempo_tablero').innerHTML = i + ':' + x + '<br>'
+                }
+            }
+        }
+
+        tiempoTablero(5,30)
+    </script>
+</body>
+</html>

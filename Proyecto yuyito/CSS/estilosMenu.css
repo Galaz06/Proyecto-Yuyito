@@ -1,0 +1,136 @@
+/* estilos generales del cuerpo de la página */
+body {
+    background-image: url('https://wallpapers.com/images/hd/best-sports-1920-x-1080-background-i6x152n16lp054lw.jpg');
+    background-size: cover;        
+    background-position: center;   
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+    color: #000000;                
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* título principal */
+h1 {
+    font-size: 6vw;                     
+    border-radius: 80px;                
+    border: 0.2vw solid #000000;       
+    background-color: #ffffff;
+    padding: 1% 3%;        
+    display: inline-block;           
+    margin: 7% auto 5% auto;   
+    color: #000000;       
+}
+
+/* espaciado del menú */
+nav {
+    margin-top: 3%; 
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* botones de deportes */
+#basquet, #futbol, #volei {
+    position: relative;
+    display: inline-block;
+    border-radius: 50px;
+    border: 0.2vw solid #000000;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 3.5vw;             
+    text-decoration: none;
+    padding: 5% 7%;              
+    transition: transform 0.5s ease, color 0.5s ease;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* imagen de fondo en hover */
+#basquet::before, #futbol::before, #volei::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: -1;
+}
+
+/* fondos individuales para cada botón */
+#basquet::before {
+    background-image: url('https://tse1.mm.bing.net/th/id/OIP.Yzr-qsVUcjW3_iywsRNwIgHaDs?pid=Api&P=0&h=180');
+}
+#futbol::before {
+    background-image: url('https://i0.wp.com/www.muycomputer.com/wp-content/uploads/2012/01/futbol-p2p-1.jpg');
+}
+#volei::before {
+    background-image: url('https://tse2.mm.bing.net/th/id/OIP.fCKWoR80KMI38pDs49hc8gHaEK?pid=Api&P=0&h=180');
+}
+
+/* efectos hover visuales */
+#basquet:hover::before, #futbol:hover::before, #volei:hover::before {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#basquet:hover, #futbol:hover, #volei:hover {
+    transform: scale(1.5);
+    color: #ffffff;
+    background-color: transparent;
+}
+
+/* botón de sesión fijo */
+.botonSesion {
+    position: absolute;
+    top: 2%;                     
+    right: 3%;                 
+    padding: 1% 2%;                
+    background: #ffffff;
+    border: 0.2vw solid #000000;
+    color: #000000;
+    font-size: 1.2vw;              
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+/* elementos del menú con tarjetas emergentes */
+.menu-item {
+    position: relative;
+    display: inline-block;
+    margin: 2% 5%;
+}
+
+/* tarjeta informativa oculta */
+.tarjeta-info {
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 10%) scale(0.95);
+    
+    width: 80%; 
+    background-color: rgba(0, 0, 50, 0.9);
+    color: #b0bec5;
+    border-radius: 1vw;
+
+    padding: 3% 5%;
+    margin-top: 11%;
+    
+    box-shadow: 0 0.4vw 0.8vw rgba(0,0,0,0.3);
+    z-index: 10;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    text-align: left;
+}
+
+/* mostrar tarjeta al hacer hover */
+.menu-item:hover .tarjeta-info {
+    opacity: 1;
+    transform: translate(-50%, 0%) scale(1);
+}
